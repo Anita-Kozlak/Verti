@@ -1,0 +1,21 @@
+@import "reset";
+@import "mixins";
+@import "setting";
+@import "hamburger";
+@import "welcome";
+@import "article";
+@import "section";
+@import "footer";
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #444444;
+  background-color: $background-color;
+  font-family: $main-font;
+  margin: 0 auto;
+}

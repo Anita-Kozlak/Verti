@@ -1,0 +1,50 @@
+.section {
+  background-color: white;
+  margin: 0 auto;
+  max-width: 1270px;
+  .section__one,
+  .section__two {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    .section__one-heading,
+    .section__two-heading,
+    .section__one-description {
+      margin: 10px;
+    }
+  }
+}
+.section a {
+  text-decoration: none;
+}
+
+.section__two-photo {
+  width: 50%;
+  border-radius: 5px;
+  margin: 10px;
+
+}
+.section__two-photos-one,
+.section__two-photos-two {
+  display: flex;
+  justify-content: center;
+}
+
+.section__button {
+  @include button;
+}
+
+@include desktop {
+  .section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .section__one {
+    width: 60%;
+    line-height: 2em;
+  }
+  .section__two {
+    width: 30%;
+  }
+}

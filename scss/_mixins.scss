@@ -1,0 +1,33 @@
+$tablet-width: 48em;
+$desktop-width: 72em;
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin button{
+  border: none;
+  padding: 0.5em 0;
+  font-weight: 700;
+  font-size: 30px;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  background-color: $border-color;
+  color: white;
+  span {
+    margin-right: 15px;
+  }
+  @content;
+}

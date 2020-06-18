@@ -1,0 +1,47 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  width: 100%;
+
+  .article-one,
+  .article-two,
+  .article-three {
+    background-color: white;
+    border-radius: 5px;
+    margin: 20px;
+
+  }
+}
+.article__photo {
+  width: 100%;
+  border-radius: 5px;
+}
+.article__heading {
+  padding: 10px;
+}
+.article__subheading,
+{
+  padding: 10px;
+  font-size: 17px;
+}
+.article__description {
+  padding: 10px;
+  font-size: 17px;
+  padding-bottom: 40px;
+}
+
+@include tablet {
+  .article {
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+  .article-one,
+  .article-two,
+  .article-three {
+    height: 550px;
+  }
+}

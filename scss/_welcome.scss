@@ -1,0 +1,68 @@
+.welcome{
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+.welcome__buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .welcome__button-one,
+  .welcome__button-two {
+    border: none;
+    padding: 0.5em 0;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+
+    span {
+      margin-right: 15px;
+    }
+  }
+}
+.welcome__button-one {
+  @include button
+}
+.welcome__button-two {
+  @include button {
+    background-color: #e4e4e4;
+    color: #444444;
+  }
+}
+.welcome a {
+  text-decoration: none;
+}
+
+
+@include tablet {
+  .welcome {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1260px;
+
+  }
+  .welcome__text {
+    width: 50%
+
+  }
+  .welcome__buttons {
+    width: 40%;
+    .welcome__button-one,
+    .welcome__button-two {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+    }
+  }
+}
