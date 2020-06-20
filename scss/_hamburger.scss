@@ -7,6 +7,7 @@
 .header {
   max-width: 1200px;
   margin: 15px auto;
+  position: relative;
 }
 .header ul li {
   list-style: none;
@@ -29,8 +30,12 @@
   padding-right: 20px;
   font-weight: 700;
   font-size: 15px;
+  margin-bottom: 20px;
 }
-
+.header__hamburger-container {
+  display: flex;
+  flex-direction: column;
+}
 .header__hamburger {
   margin: 10px;
   width: 70px;
@@ -81,7 +86,9 @@
 }
 
 .header__menu {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  //display: none;
 }
 
 .menu-btn:checked ~ .menu-icon .navicon {
@@ -119,13 +126,16 @@
 
   .header .header__menu {
     display: block;
+    li {
+      margin: 0;
+    }
   }
 
   .menu-icon,
   .header__hamburger {
     display: none;
   }
-  .header__container {
+  .header__menu-container {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
